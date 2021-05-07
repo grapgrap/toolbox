@@ -5,7 +5,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
-    "@grapgrap/babel-preset": "workspace:packages/babel-preset",
+    "@grapgrap/babel-config": "workspace:packages/babel-config",
     "@grapgrap/eslint-config": "workspace:packages/eslint-config",
     "@grapgrap/webpack-config": "workspace:packages/webpack-config",
     "@types/react": "^17.0.5",

@@ -1,5 +1,5 @@
 {
-  "name": "@grapgrap/babel-preset",
+  "name": "@grapgrap/babel-config",
   "peerDependencies": {
     "@babel/core": "^7.14.0",
     "react": "^17.0.2",
