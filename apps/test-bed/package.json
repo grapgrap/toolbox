@@ -1,6 +1,7 @@
 {
   "name": "test-bed",
   "devDependencies": {
+    "@babel/core": "^7.14.0",
     "@grapgrap/babel-preset": "workspace:packages/babel-preset",
     "@grapgrap/eslint-config": "workspace:packages/eslint-config",
     "@types/react": "^17.0.5",
@@ -13,14 +14,13 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4"
   },
   "dependencies": {
-    "@babel/core": "^7.14.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-refresh": "^0.10.0",
-    "styled-components": "^5.3.0",
-    "typescript": "^4.2.4"
+    "styled-components": "^5.3.0"
   }
 }
