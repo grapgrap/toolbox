@@ -30,12 +30,15 @@ module.exports = (api, options = { target: 'browser', react: true }) => {
 
   const reactRefresh = options.react && isDev ? 'react-refresh/babel' : undefined;
 
-  const targets = [
-    options.target === 'node' || isTest ? 'node current' : undefined,
-    options.target === 'browser' ? 'default ie 11' : undefined,
-  ].filter(Boolean);
-  const preset = [env, react, typescript].filter(Boolean);
-  const plugin = [styledComponents, reactRefresh].filter(Boolean);
+  const targets = Object.fromEntries(
+    [
+      ['node', options.target === 'node' || isTest ? 'current' : undefined][
+        ('browser', options.target === 'browser' ? 'default ie 11' : undefined)
+      ],
+    ].filter((key, value) => Boolean(value))
+  );
+  const presets = [env, react, typescript].filter(Boolean);
+  const plugins = [styledComponents, reactRefresh].filter(Boolean);
 
-  return { targets, preset, plugin };
+  return { targets, presets, plugins };
 };
