@@ -1,0 +1,9 @@
+{
+  "extends": ["grapgrap/base"],
+  "overrides": [
+    {
+      "files": ["**/*.ts"],
+      "extends": ["grapgrap/react"]
+    }
+  ]
+}

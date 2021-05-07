@@ -1,0 +1,22 @@
+{
+  "name": "@grapgrap/toolbox",
+  "author": "Kim JongHyen <grapgrap@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "postinstall": "husky install && yarn dlx @yarnpkg/pnpify --sdk"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "husky": "^6.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4"
+  }
+}
