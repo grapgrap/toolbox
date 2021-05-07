@@ -8,7 +8,9 @@
     "apps/*"
   ],
   "scripts": {
-    "postinstall": "husky install && yarn dlx @yarnpkg/pnpify --sdk"
+    "postinstall": "husky install && yarn dlx @yarnpkg/pnpify --sdk",
+    "version:check": "yarn version check -i && yarn version apply",
+    "release": "yarn workspaces foreach -pt --no-private npm publish"
   },
   "devDependencies": {
     "@types/node": "^15.0.2",

@@ -1380,9 +1380,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@grapgrap/babel-preset@workspace:packages/babel-preset":
+"@grapgrap/babel-config@workspace:packages/babel-config":
   version: 0.0.0-use.local
-  resolution: "@grapgrap/babel-preset@workspace:packages/babel-preset"
+  resolution: "@grapgrap/babel-config@workspace:packages/babel-config"
   dependencies:
     "@babel/preset-env": ^7.14.1
     "@babel/preset-react": ^7.13.13
@@ -8347,7 +8347,7 @@ resolve@^2.0.0-next.3:
   resolution: "test-bed@workspace:apps/test-bed"
   dependencies:
     "@babel/core": ^7.14.0
-    "@grapgrap/babel-preset": "workspace:packages/babel-preset"
+    "@grapgrap/babel-config": "workspace:packages/babel-config"
     "@grapgrap/eslint-config": "workspace:packages/eslint-config"
     "@grapgrap/webpack-config": "workspace:packages/webpack-config"
     "@types/react": ^17.0.5

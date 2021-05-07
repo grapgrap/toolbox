@@ -1,5 +1,6 @@
 {
   "name": "@grapgrap/webpack-config",
+  "version": "0.0.0",
   "main": "index.js",
   "type": "module",
   "files": [
@@ -7,6 +8,13 @@
     "prod.js",
     "common.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grapgrap/toolbox"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "peerDependencies": {
     "@babel/core": "^7.14.0",
     "react-refresh": "^0.10.0",

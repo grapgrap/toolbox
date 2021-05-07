@@ -1,0 +1,4 @@
+undecided:
+  - "@grapgrap/babel-config"
+  - "@grapgrap/eslint-config"
+  - "@grapgrap/webpack-config"
