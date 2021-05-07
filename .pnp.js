@@ -27,15 +27,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:apps/test-bed"
       },
       {
-        "name": "eslint-config-grapgrap",
-        "reference": "workspace:packages/eslint-config-grapgrap"
+        "name": "@grapgrap/babel-preset",
+        "reference": "workspace:packages/babel-preset"
+      },
+      {
+        "name": "@grapgrap/eslint-config",
+        "reference": "workspace:packages/eslint-config"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["@grapgrap/babel-preset", ["workspace:packages/babel-preset"]],
+      ["@grapgrap/eslint-config", ["virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#workspace:packages/eslint-config", "workspace:packages/eslint-config"]],
       ["@grapgrap/toolbox", ["workspace:."]],
-      ["eslint-config-grapgrap", ["virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#workspace:packages/eslint-config-grapgrap", "workspace:packages/eslint-config-grapgrap"]],
       ["test-bed", ["workspace:apps/test-bed"]]
     ],
     "fallbackPool": [
@@ -113,6 +118,83 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-json-comments", "npm:3.1.1"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["@grapgrap/babel-preset", [
+        ["workspace:packages/babel-preset", {
+          "packageLocation": "./packages/babel-preset/",
+          "packageDependencies": [
+            ["@grapgrap/babel-preset", "workspace:packages/babel-preset"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@grapgrap/eslint-config", [
+        ["virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#workspace:packages/eslint-config", {
+          "packageLocation": "./.yarn/$$virtual/@grapgrap-eslint-config-virtual-f5fc8594d0/1/packages/eslint-config/",
+          "packageDependencies": [
+            ["@grapgrap/eslint-config", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#workspace:packages/eslint-config"],
+            ["@types/eslint", null],
+            ["@types/eslint-config-prettier", null],
+            ["@types/eslint-plugin-prettier", null],
+            ["@types/eslint-plugin-react", null],
+            ["@types/eslint-plugin-react-hooks", null],
+            ["@types/prettier", null],
+            ["@types/react", "npm:17.0.5"],
+            ["@types/react-dom", "npm:17.0.3"],
+            ["@types/typescript", null],
+            ["@types/typescript-eslint__eslint-plugin", null],
+            ["@types/typescript-eslint__parser", null],
+            ["@typescript-eslint/eslint-plugin", "virtual:57f79f3b97ad40730e304b4292674afa0d2230063663a2dae68d6b0cd96a2eac112a83bae872bee68f43ada9f9ffabbe54e8052882d95ab454ccc07e65af8da2#npm:4.22.1"],
+            ["@typescript-eslint/parser", "virtual:57f79f3b97ad40730e304b4292674afa0d2230063663a2dae68d6b0cd96a2eac112a83bae872bee68f43ada9f9ffabbe54e8052882d95ab454ccc07e65af8da2#npm:4.22.1"],
+            ["eslint", "npm:7.25.0"],
+            ["eslint-config-prettier", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:8.3.0"],
+            ["eslint-plugin-jest", null],
+            ["eslint-plugin-prettier", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:3.4.0"],
+            ["eslint-plugin-react", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:7.23.2"],
+            ["eslint-plugin-react-hooks", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:4.2.0"],
+            ["eslint-plugin-testing-library", null],
+            ["lint-staged", "npm:10.5.4"],
+            ["prettier", "npm:2.2.1"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:17.0.2"],
+            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+          ],
+          "packagePeers": [
+            "@types/eslint-config-prettier",
+            "@types/eslint-plugin-prettier",
+            "@types/eslint-plugin-react-hooks",
+            "@types/eslint-plugin-react",
+            "@types/eslint",
+            "@types/prettier",
+            "@types/react-dom",
+            "@types/react",
+            "@types/typescript-eslint__eslint-plugin",
+            "@types/typescript-eslint__parser",
+            "@types/typescript",
+            "@typescript-eslint/eslint-plugin",
+            "@typescript-eslint/parser",
+            "eslint-config-prettier",
+            "eslint-plugin-jest",
+            "eslint-plugin-prettier",
+            "eslint-plugin-react-hooks",
+            "eslint-plugin-react",
+            "eslint-plugin-testing-library",
+            "eslint",
+            "prettier",
+            "react-dom",
+            "react",
+            "typescript"
+          ],
+          "linkType": "SOFT",
+        }],
+        ["workspace:packages/eslint-config", {
+          "packageLocation": "./packages/eslint-config/",
+          "packageDependencies": [
+            ["@grapgrap/eslint-config", "workspace:packages/eslint-config"],
+            ["lint-staged", "npm:10.5.4"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["@grapgrap/toolbox", [
@@ -949,74 +1031,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["v8-compile-cache", "npm:2.3.0"]
           ],
           "linkType": "HARD",
-        }]
-      ]],
-      ["eslint-config-grapgrap", [
-        ["virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#workspace:packages/eslint-config-grapgrap", {
-          "packageLocation": "./.yarn/$$virtual/eslint-config-grapgrap-virtual-0bf89ddc21/1/packages/eslint-config-grapgrap/",
-          "packageDependencies": [
-            ["eslint-config-grapgrap", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#workspace:packages/eslint-config-grapgrap"],
-            ["@types/eslint", null],
-            ["@types/eslint-config-prettier", null],
-            ["@types/eslint-plugin-prettier", null],
-            ["@types/eslint-plugin-react", null],
-            ["@types/eslint-plugin-react-hooks", null],
-            ["@types/prettier", null],
-            ["@types/react", "npm:17.0.5"],
-            ["@types/react-dom", "npm:17.0.3"],
-            ["@types/typescript", null],
-            ["@types/typescript-eslint__eslint-plugin", null],
-            ["@types/typescript-eslint__parser", null],
-            ["@typescript-eslint/eslint-plugin", "virtual:57f79f3b97ad40730e304b4292674afa0d2230063663a2dae68d6b0cd96a2eac112a83bae872bee68f43ada9f9ffabbe54e8052882d95ab454ccc07e65af8da2#npm:4.22.1"],
-            ["@typescript-eslint/parser", "virtual:57f79f3b97ad40730e304b4292674afa0d2230063663a2dae68d6b0cd96a2eac112a83bae872bee68f43ada9f9ffabbe54e8052882d95ab454ccc07e65af8da2#npm:4.22.1"],
-            ["eslint", "npm:7.25.0"],
-            ["eslint-config-prettier", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:8.3.0"],
-            ["eslint-plugin-jest", null],
-            ["eslint-plugin-prettier", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:3.4.0"],
-            ["eslint-plugin-react", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:7.23.2"],
-            ["eslint-plugin-react-hooks", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:4.2.0"],
-            ["eslint-plugin-testing-library", null],
-            ["lint-staged", "npm:10.5.4"],
-            ["prettier", "npm:2.2.1"],
-            ["react", "npm:17.0.2"],
-            ["react-dom", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:17.0.2"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
-          ],
-          "packagePeers": [
-            "@types/eslint-config-prettier",
-            "@types/eslint-plugin-prettier",
-            "@types/eslint-plugin-react-hooks",
-            "@types/eslint-plugin-react",
-            "@types/eslint",
-            "@types/prettier",
-            "@types/react-dom",
-            "@types/react",
-            "@types/typescript-eslint__eslint-plugin",
-            "@types/typescript-eslint__parser",
-            "@types/typescript",
-            "@typescript-eslint/eslint-plugin",
-            "@typescript-eslint/parser",
-            "eslint-config-prettier",
-            "eslint-plugin-jest",
-            "eslint-plugin-prettier",
-            "eslint-plugin-react-hooks",
-            "eslint-plugin-react",
-            "eslint-plugin-testing-library",
-            "eslint",
-            "prettier",
-            "react-dom",
-            "react",
-            "typescript"
-          ],
-          "linkType": "SOFT",
-        }],
-        ["workspace:packages/eslint-config-grapgrap", {
-          "packageLocation": "./packages/eslint-config-grapgrap/",
-          "packageDependencies": [
-            ["eslint-config-grapgrap", "workspace:packages/eslint-config-grapgrap"],
-            ["lint-staged", "npm:10.5.4"]
-          ],
-          "linkType": "SOFT",
         }]
       ]],
       ["eslint-config-prettier", [
@@ -2796,12 +2810,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./apps/test-bed/",
           "packageDependencies": [
             ["test-bed", "workspace:apps/test-bed"],
+            ["@grapgrap/eslint-config", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#workspace:packages/eslint-config"],
             ["@types/react", "npm:17.0.5"],
             ["@types/react-dom", "npm:17.0.3"],
             ["@typescript-eslint/eslint-plugin", "virtual:57f79f3b97ad40730e304b4292674afa0d2230063663a2dae68d6b0cd96a2eac112a83bae872bee68f43ada9f9ffabbe54e8052882d95ab454ccc07e65af8da2#npm:4.22.1"],
             ["@typescript-eslint/parser", "virtual:57f79f3b97ad40730e304b4292674afa0d2230063663a2dae68d6b0cd96a2eac112a83bae872bee68f43ada9f9ffabbe54e8052882d95ab454ccc07e65af8da2#npm:4.22.1"],
             ["eslint", "npm:7.25.0"],
-            ["eslint-config-grapgrap", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#workspace:packages/eslint-config-grapgrap"],
             ["eslint-config-prettier", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:3.4.0"],
             ["eslint-plugin-react", "virtual:2831f79207484d3cf2ce9133aa01364866dc575515d0a494667f712f80ad87a75b1444b379de94050a2f19dc816700ba5c3cb402798f7a671eab942a8e6dd43b#npm:7.23.2"],

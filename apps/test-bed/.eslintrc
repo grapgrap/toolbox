@@ -1,9 +1,9 @@
 {
-  "extends": ["grapgrap/base"],
+  "extends": ["@grapgrap/eslint-config/base"],
   "overrides": [
     {
-      "files": ["**/*.ts"],
-      "extends": ["grapgrap/react"]
+      "files": ["**/*.tsx"],
+      "extends": ["@grapgrap/eslint-config/react"]
     }
   ]
 }

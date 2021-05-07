@@ -58,6 +58,37 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@grapgrap/babel-preset@workspace:packages/babel-preset":
+  version: 0.0.0-use.local
+  resolution: "@grapgrap/babel-preset@workspace:packages/babel-preset"
+  languageName: unknown
+  linkType: soft
+
+"@grapgrap/eslint-config@workspace:packages/eslint-config":
+  version: 0.0.0-use.local
+  resolution: "@grapgrap/eslint-config@workspace:packages/eslint-config"
+  dependencies:
+    lint-staged: ^10.5.4
+  peerDependencies:
+    "@typescript-eslint/eslint-plugin": ^4.22.1
+    "@typescript-eslint/parser": ^4.22.1
+    eslint: ^7.25.0
+    eslint-config-prettier: ^8.3.0
+    eslint-plugin-prettier: ^3.4.0
+    eslint-plugin-react: ^7.23.2
+    eslint-plugin-react-hooks: ^4.2.0
+    prettier: ^2.2.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: ^4.2.4
+  peerDependenciesMeta:
+    eslint-plugin-jest:
+      optional: true
+    eslint-plugin-testing-library:
+      optional: true
+  languageName: unknown
+  linkType: soft
+
 "@grapgrap/toolbox@workspace:.":
   version: 0.0.0-use.local
   resolution: "@grapgrap/toolbox@workspace:."
@@ -692,31 +723,6 @@ __metadata:
   checksum: f9484b8b4c8827d816e0fd905c25ed4b561376a9c220e1430403ea84619bf680c76a883a48cff8b8e091daf55d6a497e37479f9787b9f15f3c421b6054289744
   languageName: node
   linkType: hard
-
-"eslint-config-grapgrap@workspace:packages/eslint-config-grapgrap":
-  version: 0.0.0-use.local
-  resolution: "eslint-config-grapgrap@workspace:packages/eslint-config-grapgrap"
-  dependencies:
-    lint-staged: ^10.5.4
-  peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^4.22.1
-    "@typescript-eslint/parser": ^4.22.1
-    eslint: ^7.25.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-react: ^7.23.2
-    eslint-plugin-react-hooks: ^4.2.0
-    prettier: ^2.2.1
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    typescript: ^4.2.4
-  peerDependenciesMeta:
-    eslint-plugin-jest:
-      optional: true
-    eslint-plugin-testing-library:
-      optional: true
-  languageName: unknown
-  linkType: soft
 
 "eslint-config-prettier@npm:^7.1.0":
   version: 7.2.0
@@ -2260,12 +2266,12 @@ resolve@^2.0.0-next.3:
   version: 0.0.0-use.local
   resolution: "test-bed@workspace:apps/test-bed"
   dependencies:
+    "@grapgrap/eslint-config": "workspace:packages/eslint-config"
     "@types/react": ^17.0.5
     "@types/react-dom": ^17.0.3
     "@typescript-eslint/eslint-plugin": ^4.22.1
     "@typescript-eslint/parser": ^4.22.1
     eslint: ^7.25.0
-    eslint-config-grapgrap: "workspace:packages/eslint-config-grapgrap"
     eslint-config-prettier: ^8.3.0
     eslint-plugin-prettier: ^3.4.0
     eslint-plugin-react: ^7.23.2

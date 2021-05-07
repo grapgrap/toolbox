@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-grapgrap",
+  "name": "@grapgrap/eslint-config",
   "files": [
     "base.js",
     "jest.js",
