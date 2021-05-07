@@ -11,6 +11,7 @@
     "postinstall": "husky install && yarn dlx @yarnpkg/pnpify --sdk"
   },
   "devDependencies": {
+    "@types/node": "^15.0.2",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.0.0",
     "eslint": "^7.16.0",
