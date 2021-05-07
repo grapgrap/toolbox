@@ -40,5 +40,5 @@ module.exports = (api, options = { target: 'browser', react: true }) => {
   const presets = [env, react, typescript].filter(Boolean);
   const plugins = [styledComponents, reactRefresh].filter(Boolean);
 
-  return { targets, presets, plugins };
+  return { root: true, targets, presets, plugins };
 };
